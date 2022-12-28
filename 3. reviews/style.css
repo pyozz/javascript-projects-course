@@ -1,0 +1,103 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f1f5f8;
+}
+
+.container {
+  max-width: 620px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.container .title {
+  margin-bottom: 12px;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 40px;
+  letter-spacing: 4px;
+}
+
+.container .underline {
+  width: 5rem;
+  height: 4px;
+  margin: 0 auto;
+  margin-bottom: 64px;
+  background-color: #49a6e9;
+}
+
+.container .review-card {
+  padding: 24px 32px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.container .review-card .review-card-image {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+  margin-bottom: 24px;
+}
+
+.container .review-card .review-card-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.container .review-card .username {
+  margin-bottom: 4px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 4px;
+}
+
+.container .review-card .job {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #49a6e9;
+  text-transform: uppercase;
+}
+
+.container .review-card .description {
+  margin-bottom: 12px;
+  font-size: 16px;
+  line-height: 24px;
+  color: #617d98;
+}
+
+.container .review-card .button-group {
+  margin-bottom: 8px;
+}
+
+.container .review-card .button-group .btn {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.container .review-card .random {
+  padding: 4px 8px;
+  background-color: #ebf7ff;
+  color: #49a6e9;
+  border: 2px solid #49a6e9;
+  border-radius: 8px;
+  outline: none;
+  text-transform: capitalize;
+  transition: all 0.3s linear;
+  cursor: pointer;
+}
+
+.container .review-card .random:hover {
+  background-color: #49a6e9;
+  color: #063251;
+}
