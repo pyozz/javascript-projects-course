@@ -30,3 +30,14 @@ else if (number.textContent == 0) number.style.color = '#222'
 if (number.textContent > 0) number.style.color = 'green'
 else if (number.textContent == 0) number.style.color = '#222'
 ```
+
+<hr />
+
+## ♻️ Code Refactoring
+
+기존에 <code>.number</code> 요소의 값을 <code>.textContent</code>로 가져와 숫자 타입으로 변환을 하는 작업을 매 버튼마다 부여 했는데
+이로인해 <strong>불필요한 작업</strong>과 <strong>코드가 반복</strong>되는 문제점을 확인하였다.
+
+이를 해결하기 위해 전역 변수 number를 생성하고 버튼에 따라 값을 증감한 뒤 <code>.number</code> 요소에 넣어주었다.
+
+<code>e.currentTarget</code>은 이벤트가 발생한 해당 요소 그 자체를 반환하므로 <code>querySelectorAll</code> 메서드를 사용했더라도 어떤 요소에 이벤트가 발생했는지 특정할 수 있었다.
