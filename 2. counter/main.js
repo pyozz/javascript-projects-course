@@ -1,23 +1,20 @@
-const number = document.querySelector('.number')
-const decrease = document.querySelector('.btn.decrease')
-const reset = document.querySelector('.btn.reset')
-const increase = document.querySelector('.btn.increase')
+const value = document.querySelector('.number')
+const btns = document.querySelectorAll('.btn')
 
-decrease.addEventListener('click', function () {
-  let parsedNumber = parseInt(number.textContent)
-  number.textContent = parsedNumber - 1
-  if (number.textContent < 0) number.style.color = 'red'
-  else if (number.textContent == 0) number.style.color = '#222'
-})
+let number = 0
 
-reset.addEventListener('click', function () {
-  number.textContent = 0
-  number.style.color = '#222'
-})
+btns.forEach((btn) => {
+  btn.addEventListener('click', function (e) {
+    const classes = e.currentTarget.classList
 
-increase.addEventListener('click', function () {
-  let parsedNumber = parseInt(number.textContent)
-  number.textContent = parsedNumber + 1
-  if (number.textContent > 0) number.style.color = 'green'
-  else if (number.textContent == 0) number.style.color = '#222'
+    if (classes.contains('increase')) number++
+    else if (classes.contains('decrease')) number--
+    else number = 0
+
+    if (number > 0) value.style.color = 'green'
+    else if (number < 0) value.style.color = 'red'
+    else value.style.color = '#000'
+
+    value.textContent = number
+  })
 })
