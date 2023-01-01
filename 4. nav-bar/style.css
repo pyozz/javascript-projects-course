@@ -1,0 +1,83 @@
+body {
+  background-color: #f1f5f8;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.gnb {
+  min-height: 72px;
+  background-color: #fff;
+}
+
+.gnb .inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+}
+
+.gnb .logo img {
+  display: block;
+  width: auto;
+  height: 40px;
+}
+
+.gnb .menu-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 32px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.gnb .menu-button:hover i {
+  color: #000;
+  transform: rotate(90deg);
+}
+
+.gnb .menu-button i {
+  font-size: 24px;
+  color: #48a6e8;
+  transition: color 300ms ease-in-out, transform 300ms ease-in-out;
+}
+
+.gnb .gnb-nav {
+  display: none;
+}
+
+.gnb .gnb-nav.is-open {
+  display: block;
+}
+
+.gnb .gnb-nav .nav-list .nav-item a {
+  display: block;
+  padding: 8px 16px;
+  font-size: 16px;
+  color: #324d67;
+  line-height: 24px;
+  letter-spacing: 4px;
+  text-decoration: none;
+  text-transform: capitalize;
+  cursor: pointer;
+  transition: all 300ms linear;
+}
+
+.gnb .gnb-nav .nav-list .nav-item a:hover {
+  padding-left: 24px;
+  background-color: #a5d5f8;
+  color: #49a6e9;
+}
