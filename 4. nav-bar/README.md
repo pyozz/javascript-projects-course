@@ -10,4 +10,4 @@ menuButton.addEventListener('click', function () {
 })
 ```
 
-반응형으로 구현하여 mobile/tablet+ version에 맞게 display 속성으로 보여지는 요소와 보이지 않는를 구현했다.
+반응형으로 구현하였으며 display 속성을 이용하여 mobile/tablet+ version에 맞게 보여지는 요소와 사라지는 요소가 있다.
