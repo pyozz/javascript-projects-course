@@ -23,7 +23,13 @@
   position: relative;
   width: 400px;
   height: 100vh;
-  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.sidebar header {
+  padding: 16px 24px;
 }
 
 .sidebar .logo {
@@ -49,6 +55,26 @@
   height: 32px;
   font-size: 28px;
   color: #bb2525;
+}
+
+.sidebar .sidebar-nav {
+  flex-grow: 1;
+  padding-left: 24px;
+}
+
+.sidebar .sidebar-nav .nav-list .nav-item a {
+  display: flex;
+  align-items: center;
+  height: 68px;
+  font-size: 24px;
+  color: #617e99;
+  transition: all 400ms linear;
+}
+
+.sidebar .sidebar-nav .nav-list .nav-item a:hover {
+  padding-left: 8px;
+  color: #49a6e9;
+  background-color: #a5d5f8;
 }
 
 @keyframes menu-button {
