@@ -15,7 +15,6 @@ body {
   height: 32px;
   font-size: 32px;
   color: #49a6e9;
-
   animation-name: menu-button;
   animation-duration: 900ms;
   animation-timing-function: ease-in-out;
