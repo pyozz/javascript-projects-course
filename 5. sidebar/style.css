@@ -19,6 +19,38 @@
   animation-direction: alternate;
 }
 
+.sidebar {
+  position: relative;
+  width: 400px;
+  height: 100vh;
+  padding: 16px;
+}
+
+.sidebar .logo {
+  width: 236px;
+  height: 36px;
+}
+
+.sidebar .logo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.sidebar .close-button {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  font-size: 28px;
+  color: #bb2525;
+}
+
 @keyframes menu-button {
   from {
     transform: scale(0.8);
