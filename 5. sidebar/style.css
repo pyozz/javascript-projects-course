@@ -1,5 +1,9 @@
 @import url('./reset.css');
 
+body {
+  background-color: #f1f5f8;
+}
+
 .menu-button {
   position: fixed;
   top: 32px;
@@ -26,6 +30,7 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+  background-color: #fff;
 }
 
 .sidebar header {
