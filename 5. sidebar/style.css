@@ -1,1 +1,30 @@
 @import url('./reset.css');
+
+.menu-button {
+  position: fixed;
+  top: 32px;
+  right: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  font-size: 32px;
+  color: #49a6e9;
+
+  animation-name: menu-button;
+  animation-duration: 900ms;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes menu-button {
+  from {
+    transform: scale(0.8);
+  }
+
+  to {
+    transform: scale(1.2);
+  }
+}
