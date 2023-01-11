@@ -12,7 +12,6 @@ closeButtonEl.addEventListener('click', function () {
 
 window.addEventListener('click', function (e) {
   const target = e.target.closest('.menu-button')
-  // console.log(e.target.clas.contains('.menu-button'))
 
   if (!target) {
     sideBar.classList.remove('is-active')
