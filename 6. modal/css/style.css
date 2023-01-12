@@ -1,1 +1,37 @@
 @import url('./reset.css');
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url('../images/hero.jpeg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 620px;
+  padding: 64px 0;
+  background-color: #fff;
+  text-align: center;
+  border-radius: 4px;
+}
+
+.container .title {
+  margin-bottom: 44px;
+  font-size: 64px;
+}
+
+.container .modal-button {
+  padding: 6px 12px;
+  color: #fff;
+  background-color: #49a6e9;
+  letter-spacing: 4px;
+  border-radius: 4px;
+}
