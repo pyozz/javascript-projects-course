@@ -58,6 +58,24 @@ body {
   margin-bottom: 40px;
   text-align: center;
 }
+.menu .button-group {
+  margin-bottom: 40px;
+  text-align: center;
+}
+.menu .button-group .btn-filer {
+  padding: 6px 16px;
+  color: #c59d5f;
+  border: 1px solid #c59d5f;
+  border-radius: 4px;
+  text-transform: capitalize;
+  transition: background-color 200ms ease-in-out;
+}
+.menu .button-group .btn-filer:hover {
+  background-color: #fff;
+}
+.menu .button-group .btn-filer:not(:last-child) {
+  margin-right: 8px;
+}
 .menu-list {
   display: flex;
   justify-content: space-between;

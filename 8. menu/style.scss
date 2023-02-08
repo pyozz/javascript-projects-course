@@ -12,6 +12,28 @@ body {
     text-align: center;
   }
 
+  .button-group {
+    margin-bottom: 40px;
+    text-align: center;
+
+    .btn-filer {
+      padding: 6px 16px;
+      color: #c59d5f;
+      border: 1px solid #c59d5f;
+      border-radius: 4px;
+      text-transform: capitalize;
+      transition: background-color 200ms ease-in-out;
+
+      &:hover {
+        background-color: #fff;
+      }
+
+      &:not(:last-child) {
+        margin-right: 8px;
+      }
+    }
+  }
+
   &-list {
     display: flex;
     justify-content: space-between;
