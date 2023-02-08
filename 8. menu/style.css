@@ -62,7 +62,7 @@ body {
   margin-bottom: 40px;
   text-align: center;
 }
-.menu .button-group .btn-filer {
+.menu .button-group .btn-filter {
   padding: 6px 16px;
   color: #c59d5f;
   border: 1px solid #c59d5f;
@@ -70,10 +70,10 @@ body {
   text-transform: capitalize;
   transition: background-color 200ms ease-in-out;
 }
-.menu .button-group .btn-filer:hover {
+.menu .button-group .btn-filter:hover {
   background-color: #fff;
 }
-.menu .button-group .btn-filer:not(:last-child) {
+.menu .button-group .btn-filter:not(:last-child) {
   margin-right: 8px;
 }
 .menu-list {
