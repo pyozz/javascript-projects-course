@@ -74,9 +74,11 @@ const menu = [
 ]
 
 const $menuList = document.querySelector('.menu-list')
+const $buttonGroup = document.querySelector('.button-group')
 
 window.addEventListener('DOMContentLoaded', () => {
   displayMenuItems(menu)
+  displayButtonItems()
 })
 
 function displayMenuItems(menuItems) {
@@ -105,4 +107,46 @@ function displayMenuItems(menuItems) {
 
   displayItems = displayItems.join('')
   $menuList.innerHTML = displayItems
+}
+
+function displayButtonItems() {
+  const categories = menu.reduce(
+    (acc, cur) => {
+      if (!acc.includes(cur.category)) {
+        acc.push(cur.category)
+      }
+
+      return acc
+    },
+    ['all']
+  )
+
+  const categoryButtons = categories
+    .map((category) => {
+      return /* html */ `
+      <button class="btn-filter" type="button" data-id="${category}">${category}</button>
+    `
+    })
+    .join('')
+
+  $buttonGroup.innerHTML = categoryButtons
+
+  const $filterButton = document.querySelectorAll('.btn-filter')
+  $filterButton.forEach((btn) => {
+    btn.addEventListener('click', function (e) {
+      // html
+      const category = e.currentTarget.dataset.id
+      // js
+      const categoryMenu = menu.filter((menuItem) => {
+        return menuItem.category === category // html = js
+      })
+
+      if (category === 'all') {
+        displayMenuItems(menu)
+      } else {
+        // 필터된 배열일 경우
+        displayMenuItems(categoryMenu)
+      }
+    })
+  })
 }
