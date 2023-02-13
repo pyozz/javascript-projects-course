@@ -100,7 +100,7 @@ li {
   margin-right: 18px;
 }
 .video-container .btn-switch.slide .switch {
-  left: 50%;
+  transform: translate3d(100%, 0, 0);
 }
 .video-container .btn-switch .switch {
   position: absolute;
@@ -110,5 +110,5 @@ li {
   height: 100%;
   border-radius: 8px;
   background-color: #87ceeb;
-  transition: left 300ms ease-in-out;
+  transition: transform 300ms ease-in-out;
 }
