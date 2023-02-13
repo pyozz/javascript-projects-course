@@ -1,5 +1,23 @@
 @import './reset';
 
+.preloader {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  background-color: #fff;
+
+  &.hide {
+    z-index: -999;
+    visibility: hidden;
+  }
+}
+
 .video-container {
   position: relative;
   width: 100%;
