@@ -37,3 +37,89 @@ li {
   list-style: none;
   padding-left: 0;
 }
+
+body {
+  background-color: #f1f5f8;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.tabs {
+  padding: 40px 0;
+}
+.tabs-title {
+  margin-bottom: 70px;
+  text-align: center;
+}
+.tabs-title h1 {
+  margin-bottom: 20px;
+  font-size: 40px;
+}
+.tabs-title p {
+  color: #617d98;
+}
+.tabs .inner {
+  display: flex;
+  justify-content: flex-start;
+  width: 1000px;
+  margin: 0 auto;
+}
+.tabs .inner img {
+  width: 569px;
+  height: 320px;
+  margin-right: 40px;
+  border-radius: 8px;
+}
+.tabs .about .button-group {
+  display: flex;
+  align-items: center;
+  border-radius: 7px 7px 0 0;
+  overflow: hidden;
+}
+.tabs .about .button-group button {
+  width: 33.3333333333%;
+  padding: 16px 0;
+  font-size: 16px;
+  text-transform: capitalize;
+  background-color: #dae2ec;
+  transition: all 200ms ease-in-out;
+}
+.tabs .about .button-group button:hover {
+  color: #49a6e9;
+  background-color: #ebf7ff;
+}
+.tabs .about .button-group button.is-active {
+  background-color: #fff;
+}
+.tabs .about-content {
+  height: 270px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 0 0 8px 8px;
+}
+.tabs .about-content .content {
+  display: none;
+}
+.tabs .about-content .content.is-active {
+  display: block;
+}
+.tabs .about-content h4 {
+  margin-bottom: 12px;
+  font-size: 22px;
+  text-transform: capitalize;
+}
+.tabs .about-content p {
+  color: #617d98;
+}
