@@ -2,9 +2,19 @@
 
 <hr />
 
-클릭하면 클릭한 해당 버튼과 관련된 content 내용을 보여주기 위해 버튼에 data 속성을 부여하고 클릭시 이 data 속성과 일치하는 content를 보여준다.
+## Objectives
+
+- 클릭한 버튼에 따라 다른 컨텐츠 내용을 보여준다.
+
+<br />
+
+## Solution
+
+클릭하면 클릭한 <strong>해당 버튼과 관련된 content 내용을 보여주기 위해</strong> 버튼에 data 속성을 부여하고 클릭시 이 data 속성과 일치하는 content를 보여준다.
 
 여기서 클릭 이벤트를 버튼전체와 컨텐츠를 감싸는 부모 요소에 부여했는데 버튼 클릭시에만 이벤트 핸들러가 동작하도록 dataset 프로퍼티를 참조해 존재하는 경우에만 동작하도록 구현하였다.
+
+<code>.about</code>에 이벤트를 등록한 이유는 해당 요소에서 이벤트 발생시 내부 요소인 <code>.button-group</code>과 <code>.content</code>들을 제어할 수 있기 때문이다.
 
 ```javascript
 const id = e.target.dataset.id
@@ -17,6 +27,11 @@ if (id) {
 
 버튼 하나를 클릭하면 일단 모든 버튼에 대해 <code>is-active</code> 클래스를 제거시키고 <code>e.target</code> 으로 클릭한 버튼 요소에만 <code>is-active</code> 클래스가 추가되도록 하였다.
 
+- e.target : 이벤트를 발생시킨 DOM 요소를 가리킨다.
+- e.currentTarget : 이벤트 핸들러가 등록된 DOM 요소를 가리킨다.
+
+<br />
+
 ```javascript
 btns.forEach((btn) => {
   // 먼저 모든 버튼에 대해 비활성화 시키고
@@ -25,6 +40,7 @@ btns.forEach((btn) => {
 // 내가 클릭한 요소만 따로 활성화시킨다.
 e.target.classList.add(ACTIVE_CLASSNAME)
 ```
+
 <br />
 
 content에서는 내가 클릭한 버튼의 data 속성의 값을 얻어 이와 일치하는 id를 갖는 content에만 <code>is-active</code>를 추가하였다.
