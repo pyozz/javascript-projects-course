@@ -2,7 +2,15 @@
 
 <hr />
 
-1. 초기 로딩시 reviews 배열의 첫 번째 요소에 대한 정보를 출력하기 위해 <code>DOMContentLoaded</code> 이벤트를 사용했다.
+## Objectives
+
+- 버튼 기능(이전, 다음, 랜덤)에 맞게 각기 다른 유저들의 정보를 나타낸다.
+
+<br />
+
+## Solution
+
+초기 로딩시 reviews 배열의 첫 번째 요소에 대한 정보를 출력하기 위해 <code>DOMContentLoaded</code> 이벤트를 사용했다.
 
 ```javascript
 window.addEventListener('DOMContentLoaded', function () {
@@ -27,13 +35,14 @@ function showItem() {
 
 <br />
 
-2. 이전이나 다음 버튼을 클릭하면 reviews 배열의 인덱스를 조절하는 currentItem 변수의 값을 증감시키는데 이때, 인덱스 범위가 0에서 <strong>reviews 배열 길이 - 1</strong>을 벗어나지 않도록 제어문으로 처리하였다.
+이전이나 다음 버튼을 클릭하면 reviews 배열의 인덱스를 조절하는 currentItem 변수의 값을 증감시키는데 이때, currentItem 변수가 0에서 <strong>reviews 배열 길이 - 1</strong>을 벗어나지 않도록 제어문으로 처리하였다.
 
 ```javascript
 prevBtn.addEventListener('click', function () {
   currentItem--
   // 마지막 요소로
   if (currentItem < 0) currentItem = reviews.length - 1
+  // 위 코드로 인해 변경된 currentItem 변수를 활용하게된다.
   showItem()
 })
 
@@ -41,6 +50,7 @@ nextBtn.addEventListener('click', function () {
   currentItem++
   // 첫 번째 요소로
   if (currentItem > reviews.length - 1) currentItem = 0
+  // 위 코드로 인해 변경된 currentItem 변수를 활용하게된다.
   showItem()
 })
 ```
