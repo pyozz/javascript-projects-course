@@ -10,3 +10,31 @@ const text = [
   `Man braid celiac synth freegan readymade, pitchfork fam salvia waistcoat lomo bitters gentrify four loko. Pitchfork semiotics post-ironic vegan. Tofu meditation microdosing hashtag semiotics venmo. Flexitarian vape tilde taiyaki. Prism poutine farm-to-table, messenger bag vegan taxidermy tattooed sartorial squid jean shorts fixie selvage trust fund vape.`,
   `Rutters Plate Fleet boom chandler Brethren of the Coast handsomely lookout marooned brigantine knave. Buccaneer gangway jack rum loot spyglass line Jack Tar fore gaff. Gaff topmast scuttle ballast swab draught measured fer yer chains dance the hempen jig Chain Shot yardarm.`,
 ]
+
+const form = document.querySelector('.lorem-form')
+const input = document.getElementById('amount')
+const result = document.querySelector('.lorem-text')
+
+form.addEventListener('submit', function (e) {
+  e.preventDefault()
+
+  const value = parseInt(input.value)
+  const random = Math.floor(Math.random() * text.length)
+
+  if (value < 0 || value > 10 || isNaN(value)) {
+    result.innerHTML = /* html */ `
+      <p>${text[random]}</p>
+    `
+  } else {
+    const tmp = text.slice(0, value)
+    const resultText = tmp
+      .map((item) => {
+        return /* html */ `
+        <p>${item}</p>
+      `
+      })
+      .join('')
+
+    result.innerHTML = resultText
+  }
+})
