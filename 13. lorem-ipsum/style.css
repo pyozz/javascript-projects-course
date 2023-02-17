@@ -38,6 +38,49 @@ li {
   padding-left: 0;
 }
 
-h1 {
-  color: hotpink;
+body {
+  background-color: #f1f5f8;
+}
+
+.lorem {
+  width: 1000px;
+  margin: 0 auto;
+  margin-top: 80px;
+  text-align: center;
+}
+.lorem .title {
+  margin-bottom: 30px;
+  color: #104e7a;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+.lorem-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 32px;
+}
+.lorem-form label {
+  margin-right: 8px;
+  color: #063251;
+  font-size: 20px;
+  text-transform: capitalize;
+}
+.lorem-form input {
+  width: 70px;
+  padding: 6px 12px;
+  margin-right: 8px;
+  background-color: #fff;
+  border-radius: 8px;
+}
+.lorem-form button {
+  padding: 6px 12px;
+  color: #104e7a;
+  background-color: #a5d5f8;
+  border-radius: 8px;
+  text-transform: uppercase;
+}
+.lorem-text p {
+  margin-bottom: 32px;
+  color: #617d98;
 }
