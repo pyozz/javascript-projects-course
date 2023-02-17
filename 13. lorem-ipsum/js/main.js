@@ -21,7 +21,7 @@ form.addEventListener('submit', function (e) {
   const value = parseInt(input.value)
   const random = Math.floor(Math.random() * text.length)
 
-  if (value < 0 || value > 10 || isNaN(value)) {
+  if (value < 0 || value > text.length || isNaN(value)) {
     result.innerHTML = /* html */ `
       <p>${text[random]}</p>
     `
@@ -37,4 +37,6 @@ form.addEventListener('submit', function (e) {
 
     result.innerHTML = resultText
   }
+
+  input.value = ''
 })
