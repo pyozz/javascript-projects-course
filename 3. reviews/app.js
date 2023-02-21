@@ -41,16 +41,6 @@ const prevBtn = document.querySelector('.btn.is-left')
 const nextBtn = document.querySelector('.btn.is-right')
 const randomBtn = document.querySelector('.random')
 
-// Function
-function showItem() {
-  const item = reviews[currentItem]
-  image.src = item.img
-  image.alt = item.name
-  userName.textContent = item.name
-  job.textContent = item.job
-  desc.textContent = item.text
-}
-
 let currentItem = 0
 
 // Events
@@ -74,3 +64,13 @@ randomBtn.addEventListener('click', function () {
   currentItem = Math.floor(Math.random() * reviews.length)
   showItem()
 })
+
+// Function
+function showItem() {
+  const item = reviews[currentItem]
+  image.src = item.img
+  image.alt = item.name
+  userName.textContent = item.name
+  job.textContent = item.job
+  desc.textContent = item.text
+}
