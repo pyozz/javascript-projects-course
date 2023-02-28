@@ -1,11 +1,9 @@
-const modalButtonEl = document.querySelector('.modal-button')
-const modalContainerEl = document.querySelector('.modal-container')
-const closeButtonEl = document.querySelector('.close-button')
-
-modalButtonEl.addEventListener('click', function () {
-  modalContainerEl.classList.add('is-active')
+const button = document.querySelector('.modal-button')
+const modal = document.querySelector('.modal')
+button.addEventListener('click', function () {
+  modal.showModal()
 })
 
-closeButtonEl.addEventListener('click', function () {
-  modalContainerEl.classList.remove('is-active')
+modal.addEventListener('close', function () {
+  console.log(modal.returnValue)
 })
