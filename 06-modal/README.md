@@ -2,4 +2,24 @@
 
 <hr />
 
-버튼 클릭에 의해 <code>.is-active</code> 클래스 추가, 제거합니다.
+## Objectives
+
+- 버튼 클릭시 모달창을 띄운다.
+
+<br />
+
+## Solution
+
+```javascript
+modalButtonEl.addEventListener('click', function () {
+  modalContainerEl.classList.add('is-active')
+})
+
+closeButtonEl.addEventListener('click', function () {
+  modalContainerEl.classList.remove('is-active')
+})
+```
+
+<hr />
+
+## ♻️ Refactoring
